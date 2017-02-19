@@ -24,14 +24,14 @@ html, body {
   order: 1;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: row;
   flex-direction: column;
   text-align: center;
 }
 
 .footer {
+  font-size: 15px;
   background-color: #aaaaaa;
   background-image: url('../img/footer-background.png');
   height: 400px;
@@ -91,6 +91,8 @@ html, body {
 
 .halley-interactive {
   background-image: url('../img/halley-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 128px;
   height: 74px;
 }
@@ -105,15 +107,14 @@ html, body {
 }
 
 .title-the, .title-of-benjamin-paulus {
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .title-illusionarium {
-  font-size: 60px;
+  font-size: 90px;
 }
 
 .social-media {
-  width: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -149,6 +150,12 @@ html, body {
   width: 100%;
 }
 
+.scroll-down-btn {
+  width: 113px;
+  height: 50px;
+  background-image: url('../img/scroll-down-btn.png');
+}
+
 @media screen and (max-width: 1000px) {
 
   .footer-content {
@@ -167,16 +174,36 @@ html, body {
     width: 50%;
     order: 3;
   }
-  .footer-middle .date-of-birth {
-    background-image: url('../img/pencil-dash-small.png');
-  }
-}
 
-@media screen and (max-width: 900px) {
+  .title-the, .title-of-benjamin-paulus {
+    font-size: 30px;
+  }
+
+  .title-illusionarium {
+    font-size: 60px;
+  }
+
   .date-of-birth {
     background-image: url('../img/pencil-dash-small.png');
   }
 }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .halley-interactive {
+    width: 100px;
+    height: 58px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .title-the, .title-of-benjamin-paulus {
     font-size: 20px;
