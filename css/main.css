@@ -18,7 +18,7 @@ html, body {
 
 .artwork {
   background-color: #eeeeee;
-  background-image: url('/img/benjamin-paulus-artwork.png');
+  background-image: url('img/benjamin-paulus-artwork.png');
   background-size: cover;
   background-position: center;
   order: 1;
@@ -33,7 +33,7 @@ html, body {
 
 .footer {
   background-color: #aaaaaa;
-  background-image: url('/img/footer-background.png');
+  background-image: url('img/footer-background.png');
   height: 400px;
   order: 2;
 }
@@ -68,29 +68,29 @@ html, body {
 }
 
 .instagram {
-  background-image: url('/img/social-instagram.png');
+  background-image: url('img/social-instagram.png');
 }
 .twitter {
-  background-image: url('/img/social-twitter.png');
+  background-image: url('img/social-twitter.png');
 }
 .facebook {
-  background-image: url('/img/social-facebook.png');
+  background-image: url('img/social-facebook.png');
 }
 .linkedin {
-  background-image: url('/img/social-linkedin.png');
+  background-image: url('img/social-linkedin.png');
 }
 
 .date-of-birth {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('/img/pencil-dash-large.png');
+  background-image: url('img/pencil-dash-large.png');
   height: 83px;
   width: 100%;
 }
 
 @media screen and (max-width: 900px) {
   .date-of-birth {
-    background-image: url('/img/pencil-dash-small.png');
+    background-image: url('img/pencil-dash-small.png');
   }
 }
 @media screen and (max-width: 450px) {
