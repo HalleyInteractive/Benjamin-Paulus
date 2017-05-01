@@ -130,16 +130,16 @@ html, body {
 }
 
 .instagram {
-  background-image: url('../img/social-instagram.png');
+  background-image: url('../img/social-instagram.svg');
 }
 .twitter {
-  background-image: url('../img/social-twitter.png');
+  background-image: url('../img/social-twitter.svg');
 }
 .facebook {
-  background-image: url('../img/social-facebook.png');
+  background-image: url('../img/social-facebook.svg');
 }
 .linkedin {
-  background-image: url('../img/social-linkedin.png');
+  background-image: url('../img/social-linkedin.svg');
 }
 
 .date-of-birth {
