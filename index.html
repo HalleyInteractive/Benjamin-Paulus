@@ -100,6 +100,7 @@
         pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
         socialIconsTop.style.opacity = 1 - pos;
         socialIconsFooter.style.opacity = pos;
+        scrollDownButton.style.opacity = 1 - pos;
         feather.style.top = (30 + (pos * 5)).toString() + "%";
         feather.style.left = (20 - (pos * 2)).toString() + "%";
         feather.style.transform = "rotate(" + (-15 + (15 * pos)).toString() + "deg)";
