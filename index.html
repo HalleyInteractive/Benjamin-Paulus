@@ -84,12 +84,10 @@
       }
 
       function scrollToBottom() {
-        
-        if (++currentScrollNumber < scrollLimit && 
-              document.body.scrollTop <= document.body.scrollHeight - document.body.clientHeight) {
-          document.body.scrollTop += 10;
-        } else {
+        if (element.scrollHeight - element.scrollTop === element.clientHeight) {
           clearInterval(animationInterval);
+        } else {
+          document.body.scrollTop += 10;
         }
       }
 
