@@ -73,7 +73,7 @@
       var feather = document.getElementById("feather");
 
       scrollDownButton.addEventListener('click', clickHandler);
-      scrollDownButton.addEventListener('touchstart', clickHandler);
+      scrollDownButton.addEventListener('touchend', clickHandler);
       window.addEventListener('scroll', scrollHandler);
       var animationInterval = null;
       var scrollLimit = 200;
