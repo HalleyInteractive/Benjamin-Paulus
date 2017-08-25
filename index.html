@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:200,200i,400,400i" rel="stylesheet">
@@ -71,20 +71,21 @@
       var socialIconsTop = document.getElementById("social-media-top");
       var socialIconsFooter = document.getElementById("social-media-footer");
       var feather = document.getElementById("feather");
+      var animationInterval = null;
+      var docElm = document.documentElement;
+      var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
 
       scrollDownButton.addEventListener('click', clickHandler);
-      scrollDownButton.addEventListener('touchend', clickHandler);
+      scrollDownButton.addEventListener("touchstart", clickHandler, false);
       window.addEventListener('scroll', scrollHandler);
-      var animationInterval = null;
-      var scrollLimit = 200;
-      var currentScrollNumber = 0;
-
+      
       function clickHandler(e) {
         animationInterval = setInterval(scrollToBottom, 5);
       }
 
       function scrollToBottom() {
-        if (element.scrollHeight - element.scrollTop === (element.clientHeight + 50)) {
+        pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
+        if (pos >= 1) {
           clearInterval(animationInterval);
         } else {
           document.body.scrollTop += 10;
@@ -92,8 +93,7 @@
       }
 
       function scrollHandler() {
-        var docElm = document.documentElement;
-        var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
+        pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
         socialIconsTop.style.opacity = 1 - pos;
         socialIconsFooter.style.opacity = pos;
         feather.style.top = (30 + (pos * 5)).toString() + "%";
