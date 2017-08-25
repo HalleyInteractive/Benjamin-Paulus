@@ -76,13 +76,17 @@
       scrollDownButton.addEventListener('touchstart', clickHandler);
       window.addEventListener('scroll', scrollHandler);
       var animationInterval = null;
+      var scrollLimit = 200;
+      var currentScrollNumber = 0;
 
       function clickHandler(e) {
         animationInterval = setInterval(scrollToBottom, 5);
       }
 
       function scrollToBottom() {
-        if (document.body.scrollTop <= document.body.scrollHeight - document.body.clientHeight) {
+        
+        if (++currentScrollNumber < scrollLimit && 
+              document.body.scrollTop <= document.body.scrollHeight - document.body.clientHeight) {
           document.body.scrollTop += 10;
         } else {
           clearInterval(animationInterval);
