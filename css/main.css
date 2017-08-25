@@ -6,6 +6,11 @@ html, body {
   color: #FFFFFF;
 }
 
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .container {
   height: 100%;
   display: flex;
