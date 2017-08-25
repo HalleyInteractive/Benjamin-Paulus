@@ -196,6 +196,7 @@ a {
   -webkit-transition: padding 200ms;
   transition: margin 200ms;
   cursor: pointer;
+  z-index: 2;
 }
 
 .scroll-down-btn:hover {
