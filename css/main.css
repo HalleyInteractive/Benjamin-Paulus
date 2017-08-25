@@ -37,6 +37,19 @@ html, body {
   flex-direction: column;
 }
 
+.feather {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 305px;
+  height: 272px;
+  background-image: url(../img/feather.png);
+  background-size: contain;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-15deg)
+}
+
 .title-and-social {
   justify-content: center;
   display: flex;
@@ -216,6 +229,11 @@ html, body {
   .date-of-birth {
     background-image: url('../img/pencil-dash-small.png');
   }
+
+  .feather {
+    width: 200px;
+    height: 178px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -232,6 +250,11 @@ html, body {
     width: 100px;
     height: 58px;
   }
+
+  .feather {
+    width: 150px;
+    height: 134px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -241,5 +264,10 @@ html, body {
 
   .title-illusionarium {
     font-size: 40px;
+  }
+
+  .feather {
+    width: 100px;
+    height: 89px;
   }
 }

@@ -19,6 +19,7 @@
               <div class="title-the">THE</div>
               <div class="title-illusionarium">ILLUSIONARIUM</div>
               <div class="title-of-benjamin-paulus">OF BENJAMIN PAULUS</div>
+              <div class="feather" id="feather"></div>
             </section>
             <section class="social-media" id="social-media-top">
               <a href="http://www.artstation.com" target="blank"><div class="social-icon artstation"></div></a>
@@ -28,7 +29,6 @@
             </section>
             <section class="date-of-birth"></section>
           </div>
-          <div class="feather"></div>
           <section class="scroll-down-btn" id="scroll-down-button"></section>
         </div>
       </div>
@@ -82,6 +82,7 @@
       var scrollDownButton = document.getElementById('scroll-down-button');
       var socialIconsTop = document.getElementById("social-media-top");
       var socialIconsFooter = document.getElementById("social-media-footer");
+      var feather = document.getElementById("feather");
 
       scrollDownButton.addEventListener('click', clickHandler);
       window.addEventListener('scroll', scrollHandler);
@@ -104,6 +105,9 @@
         var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - docElm.clientHeight );
         socialIconsTop.style.opacity = 1 - pos;
         socialIconsFooter.style.opacity = pos;
+        feather.style.top = (30 + (pos * 5)).toString() + "%";
+        feather.style.left = (20 - (pos * 2)).toString() + "%";
+        feather.style.transform = "rotate(" + (-15 + (15 * pos)).toString() + "deg)";
       }
       
       socialIconsTop.style.opacity = 1 - pos;
