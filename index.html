@@ -20,7 +20,7 @@
               <div class="title-illusionarium">ILLUSIONARIUM</div>
               <div class="title-of-benjamin-paulus">OF BENJAMIN PAULUS</div>
             </section>
-            <section class="social-media">
+            <section class="social-media" id="social-media-top">
               <a href="http://www.artstation.com" target="blank"><div class="social-icon artstation"></div></a>
               <a href="http://www.instagram.com" target="blank"><div class="social-icon instagram"></div></a>
               <a href="http://www.twitter.com" target="blank"><div class="social-icon twitter"></div></a>
@@ -29,7 +29,7 @@
             <section class="date-of-birth"></section>
           </div>
           <div class="feather"></div>
-          <section class="scroll-down-btn"></section>
+          <section class="scroll-down-btn" id="scroll-down-button"></section>
         </div>
       </div>
       <div class="footer">
@@ -57,7 +57,7 @@
           </section>
           <section class="footer-middle">
             <div class="footer-title">Follow</div>
-            <section class="social-media">
+            <section class="social-media" id="social-media-footer">
               <a href="http://www.artstation.com" target="blank"><div class="social-icon artstation"></div></a>
               <a href="http://www.instagram.com" target="blank"><div class="social-icon instagram"></div></a>
               <a href="http://www.twitter.com" target="blank"><div class="social-icon twitter"></div></a>
@@ -78,5 +78,36 @@
         </div>
       </div>
     </div>
+    <script>
+      var scrollDownButton = document.getElementById('scroll-down-button');
+      var socialIconsTop = document.getElementById("social-media-top");
+      var socialIconsFooter = document.getElementById("social-media-footer");
+
+      scrollDownButton.addEventListener('click', clickHandler);
+      window.addEventListener('scroll', scrollHandler);
+      var animationInterval = null;
+
+      function clickHandler(e) {
+        animationInterval = setInterval(scrollToBottom, 5);
+      }
+
+      function scrollToBottom() {
+        if (document.body.scrollTop < document.body.scrollHeight - document.body.clientHeight) {
+          document.body.scrollTop += 10;
+        } else {
+          clearInterval(animationInterval);
+        }
+      }
+
+      function scrollHandler() {
+        var docElm = document.documentElement;
+        var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - docElm.clientHeight );
+        socialIconsTop.style.opacity = 1 - pos;
+        socialIconsFooter.style.opacity = pos;
+      }
+      
+      socialIconsTop.style.opacity = 1 - pos;
+      socialIconsFooter.style.opacity = pos;
+    </script>
   </body>
 </html>
