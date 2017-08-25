@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;
+  
 }
 
 a {
@@ -144,7 +145,7 @@ a {
 
 .title-illusionarium {
   font-size: 90px;
-  margin: -15px;
+  margin: -15px 0px;
   font-family: 'Oswald';
 }
 
