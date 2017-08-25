@@ -72,7 +72,7 @@
       var socialIconsTop = document.getElementById("social-media-top");
       var socialIconsFooter = document.getElementById("social-media-footer");
       var feather = document.getElementById("feather");
-      var animationInterval = null;
+      var animationInterval = [];
       var docElm = document.documentElement;
       var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
 
@@ -82,13 +82,15 @@
       window.addEventListener('scroll', scrollHandler);
       
       function clickHandler(e) {
-        animationInterval = setInterval(scrollToBottom, 5);
+        animationInterval.push(setInterval(scrollToBottom, 5));
       }
 
       function scrollToBottom() {
         pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
         if (pos >= 1) {
-          clearInterval(animationInterval);
+          for(var i = 0; i < animationInterval.length; i++) {
+            clearInterval(animationInterval[i]);
+          }
         } else {
           document.body.scrollTop += 10;
         }
