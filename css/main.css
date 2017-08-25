@@ -114,10 +114,12 @@ html, body {
 
 .title-the, .title-of-benjamin-paulus {
   font-size: 50px;
+  font-weight: 200;
 }
 
 .title-illusionarium {
   font-size: 90px;
+  margin: -15px;
 }
 
 .social-media {
