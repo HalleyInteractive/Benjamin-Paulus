@@ -27,6 +27,16 @@ html, body {
   flex-direction: column;
 }
 
+.gradient {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/overlay.png');
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+}
+
 .title-and-social {
   justify-content: center;
   display: flex;
@@ -120,6 +130,7 @@ html, body {
 .title-illusionarium {
   font-size: 90px;
   margin: -15px;
+  font-family: 'Oswald';
 }
 
 .social-media {
