@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:200,200i,400,400i" rel="stylesheet">
+    <script type="text/javascript" src="js/hammer.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -75,8 +76,9 @@
       var docElm = document.documentElement;
       var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
 
-      scrollDownButton.addEventListener('click', clickHandler);
-      scrollDownButton.addEventListener("touchstart", clickHandler, false);
+      var hammertime = new Hammer(scrollDownButton);
+      hammertime.on('tap', clickHandler);
+
       window.addEventListener('scroll', scrollHandler);
       
       function clickHandler(e) {
