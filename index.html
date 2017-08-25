@@ -84,7 +84,7 @@
       }
 
       function scrollToBottom() {
-        if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+        if (element.scrollHeight - element.scrollTop === (element.clientHeight - 20) {
           clearInterval(animationInterval);
         } else {
           document.body.scrollTop += 10;
@@ -93,7 +93,7 @@
 
       function scrollHandler() {
         var docElm = document.documentElement;
-        var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - docElm.clientHeight );
+        var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight - 20) );
         socialIconsTop.style.opacity = 1 - pos;
         socialIconsFooter.style.opacity = pos;
         feather.style.top = (30 + (pos * 5)).toString() + "%";
