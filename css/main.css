@@ -130,9 +130,9 @@ html, body {
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 16px;
   background-repeat: no-repeat;
   background-size: contain;
 }
