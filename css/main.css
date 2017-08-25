@@ -125,6 +125,12 @@ a {
   font-size: 1.2em;
 }
 
+.footer-note {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+}
+
 .halley-interactive {
   background-image: url('../img/halley-logo.png');
   background-repeat: no-repeat;
