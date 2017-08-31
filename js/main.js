@@ -35,8 +35,6 @@ function scrollHandler() {
     scrollDownButton.style.opacity = 1 - pos;
     pencilDashTop.style.opacity = 1 -pos;
     pencilDashBottom.style.opacity = pos;
-    feather.style.top = (30 + (pos * 5)).toString() + "%";
-    feather.style.left = (20 - (pos * 2)).toString() + "%";
     feather.style.transform = "rotate(" + (-15 + (15 * pos)).toString() + "deg)";
 }
 

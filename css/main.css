@@ -46,8 +46,10 @@ a {
 
 .feather {
   position: absolute;
-  left: 20%;
-  top: 30%;
+  left: 50%;
+  top: 50%;
+  margin-top: -234px;
+  margin-left: -410px;
   width: 305px;
   height: 272px;
   background-image: url(../img/feather.png);
@@ -284,6 +286,8 @@ a {
   .feather {
     width: 200px;
     height: 178px;
+    margin-top: -216px;
+    margin-left: -260px;
   }
 }
 
@@ -305,6 +309,8 @@ a {
   .feather {
     width: 150px;
     height: 134px;
+    margin-top: -196px;
+    margin-left: -230px;
   }
 }
 
@@ -320,5 +326,7 @@ a {
   .feather {
     width: 100px;
     height: 89px;
+    margin-top: -178px;
+    margin-left: -156px;
   }
 }
