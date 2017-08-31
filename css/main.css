@@ -54,7 +54,9 @@ a {
   background-size: contain;
   -ms-transform: rotate(7deg); /* IE 9 */
   -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-  transform: rotate(-15deg)
+  transform: rotate(-15deg);
+  touch-action: none;
+  pointer-events: none;
 }
 
 .title-and-social {
@@ -193,7 +195,12 @@ a {
   height: 45px;
   margin: 16px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; 
+  transition: transform 300ms cubic-bezier(0.225, 0.675, 0.475, 1.115); 
+  transition-timing-function: cubic-bezier(0.225, 0.675, 0.475, 1.115);
+}
+.social-icon:hover {
+  transform: scale(1.5);
 }
 
 .instagram {
