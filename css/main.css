@@ -131,6 +131,7 @@ a {
   flex-grow: 1;
   display: flex;
   order: 4;
+  text-align: center;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -211,9 +212,10 @@ a {
 .date-of-birth {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../img/pencil-dash-large.png');
+  background-image: url('../img/pencil-dash-dated.svg');
   height: 83px;
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 
 .scroll-down-btn {
@@ -269,7 +271,7 @@ a {
   }
 
   .date-of-birth {
-    background-image: url('../img/pencil-dash-small.png');
+    background-image: url('../img/pencil-dash.svg');
   }
 
   .feather {
