@@ -70,7 +70,7 @@ a {
   font-size: 15px;
   background-color: #aaaaaa;
   background-image: url('../img/footer-background.png');
-  height: 400px;
+  min-height: 400px;
   order: 2;
 }
 
@@ -110,6 +110,7 @@ a {
 }
 
 .footer-middle {
+  margin-top: 20px;
   flex-direction: column;
   width: 50%;
   order: 2;
@@ -142,11 +143,25 @@ a {
 }
 
 .halley-interactive {
-  background-image: url('../img/halley-logo.png');
+  background-image: url('../img/halley-interactive-logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 128px;
   height: 74px;
+  margin: 0px 5px 5px 0px;
+}
+
+.in-association-with {
+  display: flex;
+  flex-direction:column;
+}
+
+.paladin {
+  background-image: url('../img/paladin-logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 198px;
+  height: 47px;
 }
 
 .site-title {
@@ -260,6 +275,11 @@ a {
   .halley-interactive {
     width: 100px;
     height: 58px;
+  }
+
+  .paladin {
+    width: 100px;
+    height: 24px;
   }
 
   .feather {
