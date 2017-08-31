@@ -131,15 +131,15 @@ a {
   flex-grow: 1;
   display: flex;
   order: 4;
-  text-align: center;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.footer-note div:first-child {
-  margin-top: auto;
+.footer-note > div {
+  margin: auto 5px 0px 5px;
 }
 
 .halley-interactive {
@@ -247,6 +247,17 @@ a {
   .footer-right {
     width: 50%;
     order: 3;
+  }
+
+  .footer-note > div {
+    margin: 0;
+  }
+  .footer-note > div:first-child {
+    margin-top: auto;
+  }
+
+  .footer-note {
+    flex-direction: column;
   }
 
   .title-the, .title-of-benjamin-paulus {
