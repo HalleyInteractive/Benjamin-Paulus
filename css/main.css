@@ -331,7 +331,7 @@ a {
   }
 }
 
-@media screen and (max-height: 680px) {
+@media screen and (max-height: 500px) {
   .scroll-down-btn {
     display: none;
   }
