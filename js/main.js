@@ -11,6 +11,7 @@ var pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / (
 var hammertime = new Hammer(scrollDownButton);
 hammertime.on('tap', clickHandler);
 
+
 window.addEventListener('scroll', scrollHandler);
 
 function clickHandler(e) {
@@ -18,18 +19,19 @@ function clickHandler(e) {
 }
 
 function scrollToBottom() {
-    pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
+    pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 20) );
     if (pos >= 1) {
-    for(var i = 0; i < animationInterval.length; i++) {
-        clearInterval(animationInterval[i]);
-    }
+        for(var i = 0; i < animationInterval.length; i++) {
+            clearInterval(animationInterval[i]);
+        }
     } else {
-    document.body.scrollTop += 10;
+        document.body.scrollTop += 10;
+        docElm.scrollTop += 20;
     }
 }
 
 function scrollHandler() {
-    pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 50) );
+    pos = ( document.body.scrollTop || docElm.scrollTop || docElm.scrollTop) / ( docElm.scrollHeight - (docElm.clientHeight + 20) );
     socialIconsTop.style.opacity = 1 - pos;
     socialIconsFooter.style.opacity = pos;
     scrollDownButton.style.opacity = 1 - pos;
