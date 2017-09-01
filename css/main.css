@@ -330,3 +330,9 @@ a {
     margin-left: -156px;
   }
 }
+
+@media screen and (max-height: 680px) {
+  .scroll-down-btn {
+    display: none;
+  }
+}
