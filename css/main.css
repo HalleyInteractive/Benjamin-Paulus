@@ -1,8 +1,15 @@
 html, body {
   padding: 0;
   margin: 0;
+  width: 100%;
   height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
+  
+}
+
+a {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -37,6 +44,23 @@ html, body {
   flex-direction: column;
 }
 
+.feather {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -234px;
+  margin-left: -410px;
+  width: 305px;
+  height: 272px;
+  background-image: url(../img/feather.png);
+  background-size: contain;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-15deg);
+  touch-action: none;
+  pointer-events: none;
+}
+
 .title-and-social {
   justify-content: center;
   display: flex;
@@ -50,7 +74,7 @@ html, body {
   font-size: 15px;
   background-color: #aaaaaa;
   background-image: url('../img/footer-background.png');
-  height: 400px;
+  min-height: 400px;
   order: 2;
 }
 
@@ -69,7 +93,6 @@ html, body {
   align-items: center;
   justify-content: center;
   width: 20%;
-  height: 100%;
 }
 
 .footer-info {
@@ -91,6 +114,7 @@ html, body {
 }
 
 .footer-middle {
+  margin-top: 20px;
   flex-direction: column;
   width: 50%;
   order: 2;
@@ -105,16 +129,44 @@ html, body {
   font-size: 1.2em;
 }
 
+.footer-note {
+  font-size: 0.9em;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  order: 4;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+.footer-note > div {
+  margin: auto 5px 0px 5px;
+}
+
 .halley-interactive {
-  background-image: url('../img/halley-logo.png');
+  background-image: url('../img/halley-interactive-logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 128px;
   height: 74px;
+  margin: 0px 5px 5px 0px;
 }
 
-.fleaco-design {
-  /* background-image: url('../img/') */
+.in-association-with {
+  display: flex;
+  flex-direction:column;
+}
+
+.paladin {
+  background-image: url('../img/paladin-logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 198px;
+  height: 47px;
 }
 
 .site-title {
@@ -129,7 +181,7 @@ html, body {
 
 .title-illusionarium {
   font-size: 90px;
-  margin: -15px;
+  margin: -15px 0px;
   font-family: 'Oswald';
 }
 
@@ -145,7 +197,12 @@ html, body {
   height: 45px;
   margin: 16px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; 
+  transition: transform 300ms cubic-bezier(0.225, 0.675, 0.475, 1.115); 
+  transition-timing-function: cubic-bezier(0.225, 0.675, 0.475, 1.115);
+}
+.social-icon:hover {
+  transform: scale(1.5);
 }
 
 .instagram {
@@ -164,26 +221,32 @@ html, body {
 .date-of-birth {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../img/pencil-dash-large.png');
+  background-image: url('../img/pencil-dash-dated.svg');
   height: 83px;
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 
 .scroll-down-btn {
   width: 100%;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   background-image: url('../img/scroll-down-btn.png');
   background-repeat: no-repeat;
   background-position: 50%;
+  padding: 0px;
+  -webkit-transition: padding 200ms;
+  transition: margin 200ms;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-down-btn:hover {
+  margin: -20px 0 50px 0;
 }
 
 @media screen and (max-width: 1000px) {
 
-  .footer-content {
-    height: auto;
-    margin-top: 20px;
-  }
   .footer-left {
     width: 50%;
     order: 2;
@@ -197,6 +260,17 @@ html, body {
     order: 3;
   }
 
+  .footer-note > div {
+    margin: 0;
+  }
+  .footer-note > div:first-child {
+    margin-top: auto;
+  }
+
+  .footer-note {
+    flex-direction: column;
+  }
+
   .title-the, .title-of-benjamin-paulus {
     font-size: 30px;
   }
@@ -206,7 +280,14 @@ html, body {
   }
 
   .date-of-birth {
-    background-image: url('../img/pencil-dash-small.png');
+    background-image: url('../img/pencil-dash.svg');
+  }
+
+  .feather {
+    width: 200px;
+    height: 178px;
+    margin-top: -216px;
+    margin-left: -260px;
   }
 }
 
@@ -215,14 +296,21 @@ html, body {
     font-size: 12px;
   }
 
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
   .halley-interactive {
     width: 100px;
     height: 58px;
+  }
+
+  .paladin {
+    width: 100px;
+    height: 24px;
+  }
+
+  .feather {
+    width: 150px;
+    height: 134px;
+    margin-top: -196px;
+    margin-left: -230px;
   }
 }
 
@@ -233,5 +321,12 @@ html, body {
 
   .title-illusionarium {
     font-size: 40px;
+  }
+
+  .feather {
+    width: 100px;
+    height: 89px;
+    margin-top: -178px;
+    margin-left: -156px;
   }
 }
