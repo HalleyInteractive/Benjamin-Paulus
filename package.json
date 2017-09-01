@@ -1,0 +1,32 @@
+{
+  "name": "benjamin-paulus",
+  "version": "1.0.0",
+  "description": "Site for Benjamin Paulus",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HalleyInteractive/benjamin-paulus.git"
+  },
+  "author": "Niels Overwijn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HalleyInteractive/benjamin-paulus/issues"
+  },
+  "homepage": "https://github.com/HalleyInteractive/benjamin-paulus#readme",
+  "dependencies": {
+    "ftp-deploy": "^1.2.2"
+  },
+  "devDependencies": {
+    "ftp-deploy": "^1.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.2.2"
+  }
+}
