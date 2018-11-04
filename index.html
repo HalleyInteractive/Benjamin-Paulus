@@ -11,66 +11,46 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro:200,200i,400,400i" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="artwork">
-        <div class="gradient">
-          <div class="title-and-social">
-            <section class="site-title">
-              <div class="title-the">THE</div>
-              <div class="title-illusionarium">ILLUSIONARIUM</div>
-              <div class="title-of-benjamin-paulus">OF BENJAMIN PAULUS</div>
-              <div class="feather" id="feather"></div>
-            </section>
-            <section class="social-media" id="social-media-top">
-              <a href="https://www.artstation.com/benjaminpaulus" target="blank"><div class="social-icon artstation"></div></a>
-              <a href="https://www.instagram.com/illusionariumbp" target="blank"><div class="social-icon instagram"></div></a>
-              <a href="https://www.twitter.com/illusionariumbp" target="blank"><div class="social-icon twitter"></div></a>
-              <a href="https://www.linkedin.com/in/benjaminpaulus" target="blank"><div class="social-icon linkedin"></div></a>
-            </section>
-            <section id="pencil-dash-top" class="date-of-birth"></section>
-          </div>
-          <section class="scroll-down-btn" id="scroll-down-button"></section>
-        </div>
+    <div class="container" id="container">
+      <!-- <picture class="artwork">
+        <source media="(max-width: 750px)" srcset="img/artwork/01_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/01.jpg">
+        <img src="img/artwork/01.jpg" alt="01">
+      </picture> -->
+      <picture class="artwork">
+        <source media="(max-width: 750px)" srcset="img/artwork/02_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/02.jpg">
+        <img src="img/artwork/02.jpg" alt="02">
+      </picture>
+      <picture class="artwork hidden">
+        <source media="(max-width: 750px)" srcset="img/artwork/03_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/03.jpg">
+        <img src="img/artwork/03.jpg" alt="03">
+      </picture>
+      <picture class="artwork hidden">
+        <source media="(max-width: 750px)" srcset="img/artwork/04_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/04.jpg">
+        <img src="img/artwork/04.jpg" alt="04">
+      </picture>
+      <picture class="artwork hidden">
+        <source media="(max-width: 750px)" srcset="img/artwork/05_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/05.jpg">
+        <img src="img/artwork/05.jpg" alt="05">
+      </picture>
+      <picture class="artwork hidden">
+        <source media="(max-width: 750px)" srcset="img/artwork/06_portrait.jpg">
+        <source media="(min-width: 751px)" srcset="img/artwork/06.jpg">
+        <img src="img/artwork/06.jpg" alt="06">
+      </picture>
+      <div class="artwork-overlay">       
+        <div class="logo"></div>
+        <div class="bp"></div>
+        <div class="scroll-down-btn" id="scroll-down-btn"></div>
       </div>
       <div class="footer">
-        <div class="footer-content">
-          <section class="footer-left">
-            <div class="footer-info">
-              <div class="footer-title">Info</div>
-              <div>
-                <span class="info-label">Email:</span>
-                <span class="info-content"><a href="mailto:info@benjaminpaulus.nl">info@benjaminpaulus.nl</a></span>
-              </div>
-              <div>
-                <span class="info-label">CV:</span>
-                <span class="info-content"><a href="cv-benjamin-paulus.pdf">Download here</a></span>
-              </div>
-            </div>
-          </section>
-          <section class="footer-middle">
-            <div class="footer-title">Follow</div>
-            <section class="social-media" id="social-media-footer">
-              <a href="https://www.artstation.com/benjaminpaulus" target="blank"><div class="social-icon artstation"></div></a>
-              <a href="https://www.instagram.com/illusionariumbp" target="blank"><div class="social-icon instagram"></div></a>
-              <a href="https://www.twitter.com/illusionariumbp" target="blank"><div class="social-icon twitter"></div></a>
-              <a href="https://www.linkedin.com/in/benjaminpaulus" target="blank"><div class="social-icon linkedin"></div></a>
-            </section>
-            <section id="pencil-dash-bottom" class="date-of-birth"></section>
-          </section>
-          <section class="footer-right">
-            <div class="in-association-with">
-              <div class="halley-interactive">
-              </div>
-              <div class="paladin">
-              </div>
-            </div>
-          </section>
-          <section class="footer-note"><div>All work is created by the Illusionarium of Benjamin Paulus. This website is made in association with the crafty claws of HalleyInteractive.</div>
-            <div><b>License:&nbsp;</b><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" target="blank">cc-by-nc-nd</a><div></section>
-        </div>
+        <div class="download-cv">DOWNLOAD CV</div>
       </div>
     </div>
-    <script type="text/javascript" src="js/hammer.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

@@ -1,332 +1,100 @@
 html, body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #FFFFFF;
-  
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
-a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
 .container {
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    "art"
+    "footer";
 }
 
-.artwork, .footer {
-  flex: 1 100%;
+.artwork-overlay {
+    grid-area: art;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(18, 1fr);
 }
-
 .artwork {
-  background-color: #eeeeee;
-  background-image: url('../img/benjamin-paulus-artwork.png');
-  background-size: cover;
-  background-position: center;
-  order: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
-.gradient {
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/overlay.png');
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  flex-direction: column;
+.artwork img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.feather {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -234px;
-  margin-left: -410px;
-  width: 305px;
-  height: 272px;
-  background-image: url(../img/feather.png);
-  background-size: contain;
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-  transform: rotate(-15deg);
-  touch-action: none;
-  pointer-events: none;
+.artwork.hidden {
+    opacity: 0;
 }
 
-.title-and-social {
-  justify-content: center;
-  display: flex;
-  flex-flow: row;
-  flex-direction: column;
-  text-align: center;
-  flex-grow: 1;
+.logo {
+    grid-column: 2 / 4;
+    grid-row: 7 / 12;
+    background-image: url('../img/logo.svg');
+    background-origin: content-box;
+    padding: 20px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.footer {
-  font-size: 15px;
-  background-color: #aaaaaa;
-  background-image: url('../img/footer-background.png');
-  min-height: 400px;
-  order: 2;
+.logo svg {
+    fill: #FFF;
 }
 
-.footer-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-weight: 200;
-}
-
-.footer-left, .footer-middle, .footer-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20%;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.info-label {
-  display: inline-block;
-  width: 50px;
-}
-
-.info-content {
-  font-style: italic;
-}
-
-.footer-left {
-  order: 1;
-}
-
-.footer-middle {
-  margin-top: 20px;
-  flex-direction: column;
-  width: 50%;
-  order: 2;
-}
-
-.footer-right {
-  order : 3;
-}
-
-.footer-title {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.footer-note {
-  font-size: 0.9em;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  order: 4;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-direction: row;
-}
-
-.footer-note > div {
-  margin: auto 5px 0px 5px;
-}
-
-.halley-interactive {
-  background-image: url('../img/halley-interactive-logo.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 128px;
-  height: 74px;
-  margin: 0px 5px 5px 0px;
-}
-
-.in-association-with {
-  display: flex;
-  flex-direction:column;
-}
-
-.paladin {
-  background-image: url('../img/paladin-logo.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 198px;
-  height: 47px;
-}
-
-.site-title {
-  text-shadow: 0px 0px 10px rgba(0,0,0,.5);
-  margin: 30px 0 20px 0;
-}
-
-.title-the, .title-of-benjamin-paulus {
-  font-size: 50px;
-  font-weight: 200;
-}
-
-.title-illusionarium {
-  font-size: 90px;
-  margin: -15px 0px;
-  font-family: 'Oswald';
-}
-
-.social-media {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.social-icon {
-  width: 45px;
-  height: 45px;
-  margin: 16px;
-  background-repeat: no-repeat;
-  background-size: contain; 
-  transition: transform 300ms cubic-bezier(0.225, 0.675, 0.475, 1.115); 
-  transition-timing-function: cubic-bezier(0.225, 0.675, 0.475, 1.115);
-}
-.social-icon:hover {
-  transform: scale(1.5);
-}
-
-.instagram {
-  background-image: url('../img/social-instagram.svg');
-}
-.twitter {
-  background-image: url('../img/social-twitter.svg');
-}
-.artstation {
-  background-image: url('../img/social-artstation.svg');
-}
-.linkedin {
-  background-image: url('../img/social-linkedin.svg');
-}
-
-.date-of-birth {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../img/pencil-dash-dated.svg');
-  height: 83px;
-  width: 80%;
-  align-self: center;
+.bp {
+    grid-column: 2 / 4;
+    grid-row: 13 / 16;
+    background-image: url('../img/benjamin-paulus.svg');
+    background-origin: border-box;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .scroll-down-btn {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 30px;
-  background-image: url('../img/scroll-down-btn.png');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  padding: 0px;
-  -webkit-transition: padding 200ms;
-  transition: margin 200ms;
-  cursor: pointer;
-  z-index: 2;
+    grid-column: 2 / 4;
+    grid-row: 17 / 18;
+    background-image: url('../img/scroll-down-btn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
 }
 
-.scroll-down-btn:hover {
-  margin: -20px 0 50px 0;
+.footer {
+    background-color: #0C1A1D;
+    grid-area: footer;
+    display: grid;
+    width: 100vw;
+    height: 400px;
+    grid-template-columns: 1fr 150px repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
 }
 
-@media screen and (max-width: 1000px) {
-
-  .footer-left {
-    width: 50%;
-    order: 2;
-  }
-  .footer-middle {
-    width: 100%;
-    order: 1;
-  }
-  .footer-right {
-    width: 50%;
-    order: 3;
-  }
-
-  .footer-note > div {
-    margin: 0;
-  }
-  .footer-note > div:first-child {
-    margin-top: auto;
-  }
-
-  .footer-note {
-    flex-direction: column;
-  }
-
-  .title-the, .title-of-benjamin-paulus {
-    font-size: 30px;
-  }
-
-  .title-illusionarium {
-    font-size: 60px;
-  }
-
-  .date-of-birth {
-    background-image: url('../img/pencil-dash.svg');
-  }
-
-  .feather {
-    width: 200px;
-    height: 178px;
-    margin-top: -216px;
-    margin-left: -260px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .footer {
+.download-cv {
+    color: #FFF;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    font-style: normal;
     font-size: 12px;
-  }
-
-  .halley-interactive {
-    width: 100px;
-    height: 58px;
-  }
-
-  .paladin {
-    width: 100px;
-    height: 24px;
-  }
-
-  .feather {
-    width: 150px;
-    height: 134px;
-    margin-top: -196px;
-    margin-left: -230px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .title-the, .title-of-benjamin-paulus {
-    font-size: 20px;
-  }
-
-  .title-illusionarium {
-    font-size: 40px;
-  }
-
-  .feather {
-    width: 100px;
-    height: 89px;
-    margin-top: -178px;
-    margin-left: -156px;
-  }
 }
